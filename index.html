@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tabata Timer</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="tabata">
+			<div class="tabata__controller">
+				<button class="tabata__start" id="start">start</button>
+				<button class="tabata__stop" id="stop">stop</button>
+			</div>
+			<div class="tabata__body">
+				<div class="tabata__timer">
+					<p class="title">Timer</p>
+					<div>
+						<span class="minute">15</span>:
+						<span class="second">00</span>
+					</div>
+					<p></p>
+				</div>
+				<div class="tabata_rounds">
+					<p class="title">Rounds</p>
+					<div class="round__cult">
+						<span class="left">1</span>/
+						<span class="number">4</span>
+					</div>
+					<p></p>
+				</div>
+				<div class="tabata__settings settings">
+					<div class="_setting settings__duaration">
+						<p>Work</p>
+						<button class="_val-chenge minus">-</button>
+						<span class="minute">15</span>:
+						<span class="second">00</span>
+						<button class="_val-chenge plus">+</button>
+					</div>
+					<div class="setting settings__rest">
+						<p>break</p>
+						<button class="_val-chenge minus">-</button>
+						<span class="minute">02</span>:
+						<span class="second">00</span>
+						<button class="_val-chenge plus">+</button>
+					</div>
+					<div class="setting settings__long-rest">
+						<p>Long break</p>
+						<button class="_val-chenge minus">-</button>
+						<span class="minute">08</span>:
+						<span class="second">00</span>
+						<button class="_val-chenge plus">+</button>
+					</div>
+					<div class="setting settings__rounds">
+						<p>Rounds</p>
+						<button class="_val-chenge minus">-</button>
+						<span class="rounds">4</span>
+						<button class="_val-chenge plus">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
