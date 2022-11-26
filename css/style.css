@@ -6,15 +6,32 @@
 body {
   background-color: #111016;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
 }
 
 ._short {
   color: red;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
-  max-width: 800px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   margin: 0 auto;
+  max-width: 1360px;
 }
 
 .tabata {

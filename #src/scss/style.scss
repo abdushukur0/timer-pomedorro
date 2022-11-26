@@ -1,38 +1,50 @@
-*{
+* {
 	box-sizing: border-box;
 }
-body{
+
+body {
 	background-color: #111016;
 	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
 }
 
-._short{
+._short {
 	color: red;
 }
 
-.container {
-	max-width: 800px;
-	margin: 0 auto;
+button {
+	cursor: pointer;
 }
 
-.tabata{
+.container {
+	flex: 1 1 100%;
+	margin: 0 auto;
+	max-width: 1360px;
+}
+
+.tabata {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .tabata {
+
 	/* .tabata__controller */
 	&__controller {
 		margin-bottom: 7px;
 
 	}
+
 	/* .tabata__start */
-	&__start {
-	}
+	&__start {}
+
 	/* .tabata__stop */
-	&__stop {
-	}
+	&__stop {}
+
 	/* .tabata__body */
 	&__body {
 		border: 2px solid black;
@@ -40,28 +52,33 @@ body{
 		min-width: 100%;
 		justify-content: space-between;
 	}
+
 	/* .tabata__timer */
 	&__timer {
 		border: 1px solid black;
-		display: flex;	
-		flex: 0 1 50%;	
+		display: flex;
+		flex: 0 1 50%;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		div{
+
+		div {
 			font-size: 50px;
+
 			@media (max-width: 450px) {
 				font-size: 40px;
 			}
 		}
 	}
+
 	/* .tabata__settings */
 	&__settings {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	.tabata_rounds{
+
+	.tabata_rounds {
 		border: 1px solid black;
 		flex: 0 1 30%;
 		padding: 0 10px;
@@ -71,23 +88,27 @@ body{
 		justify-content: space-between;
 	}
 }
-.minute {
-}
-.second {
-}
-.round__cult{
-	display: flex;	
+
+.minute {}
+
+.second {}
+
+.round__cult {
+	display: flex;
 	flex: 0 1 50%;
-	justify-content: center;	
+	justify-content: center;
 	align-items: center;
 	font-size: 50px;
+
 	@media (max-width: 450px) {
-			font-size: 40px;
-		}	
+		font-size: 40px;
+	}
 }
+
 .settings {
 	flex: 1 1 120px;
-	button{
+
+	button {
 		border: 0;
 		padding: 0;
 		color: #fb7706;
@@ -96,20 +117,22 @@ body{
 		background-color: transparent;
 		margin: 0 2px;
 	}
+
 	/* .settings__duaration */
-	&__duaration {
-	}
+	&__duaration {}
+
 	/* .settings__rest */
-	&__rest {
-	}
+	&__rest {}
+
 	/* .settings__long-rest */
-	&__long-rest {
-	}
+	&__long-rest {}
 }
+
 ._setting {
 	border: 1px solid black;
 	padding: 5px;
 }
+
 .setting {
 	border: 1px solid black;
 	padding: 5px;
