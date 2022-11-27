@@ -149,6 +149,32 @@ button {
   }
 }
 
+#start {
+  background-color: rgba(20, 220, 23, 0.415);
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 80px;
+}
+#start:disabled, #start[disabled] {
+  opacity: 0.4;
+}
+
+#stop {
+  background-color: rgb(228, 11, 11);
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 80px;
+}
+#stop:disabled, #stop[disabled] {
+  opacity: 0.4;
+}
+#stop.active {
+  opacity: 1;
+  background-color: rgba(20, 220, 23, 0.415);
+}
+
 .settings {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 120px;

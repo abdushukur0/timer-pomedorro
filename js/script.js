@@ -13,10 +13,23 @@ let rounds = document.querySelector('.settings .rounds');
 console.log(rounds);
 let timeArr = [900, 120, 300];
 let presentRound = 1;
-let allRounds = 1;
+let allRounds = 4;
 let working = true;
 let longBreak = false;
 let breaking = false;
+let pause = false;
+
+
+stop.disabled = true;
+stop.onclick = function () {
+	pause = !pause;
+	stop.classList.toggle('active');
+	if (pause) {
+		stop.innerHTML = 'play';
+	} else {
+		stop.innerHTML = 'pause';
+	}
+}
 
 function dataFilling() {
 	minuteSettings[0].innerHTML = Math.floor(timeArr[0] / 60);
@@ -83,6 +96,7 @@ minusSettings[3].onclick = function () {
 	}
 }
 function mainFunction() {
+	stop.disabled = false;
 	start.disabled = true;
 	for (let i = 0; i < plusSettings.length; i++) {
 		plusSettings[i].disabled = true;
@@ -90,9 +104,7 @@ function mainFunction() {
 	}
 	presentRoundShow.innerHTML = presentRound;
 	let work = timeArr[0];
-	if (presentRound % 4 != 0) {
-		let breakingTime = timeArr[1];
-	}
+	let breakingTime = timeArr[1];
 	let longBreaking;
 	if (presentRound % 4 == 0) {
 		longBreaking = timeArr[2];
@@ -103,19 +115,17 @@ function mainFunction() {
 	}
 
 	let myInterval = setInterval(() => {
-		if (work > 0) {
-			mainTimer(work);
-			work--;
-		} else if (presentRound % 4 != 0) {
-			breakingTime--;
-			mainTimer(breakingTime);
-		} else {
-			mainTimer(longBreaking);
-			longBreaking--;
-		}
-		if (presentRound == allRounds) {
-			console.log(breakingTime);
-			console.log(longBreaking);
+		if (!pause) {
+			if (work >= 0) {
+				mainTimer(work);
+				work--;
+			} else if (presentRound % 4 != 0) {
+				breakingTime--;
+				mainTimer(breakingTime);
+			} else {
+				mainTimer(longBreaking);
+				longBreaking--;
+			}
 		}
 		if (longBreaking <= 0 && breakingTime <= 0) {
 			if (presentRound == allRounds && longBreaking <= 0) {
@@ -129,7 +139,7 @@ function mainFunction() {
 				console.log(presentRound);
 			}
 		};
-	}, 10)
+	}, 100)
 }
 
 // timer start

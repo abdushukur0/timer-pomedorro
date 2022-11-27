@@ -105,6 +105,36 @@ button {
 	}
 }
 
+#start {
+	background-color: rgba(20, 220, 23, 0.415);
+	color: #fff;
+	transition: all 0.5s;
+	width: 80px;
+
+	&:disabled,
+	&[disabled] {
+		opacity: 0.4;
+	}
+}
+
+#stop {
+	background-color: rgb(228, 11, 11);
+	color: #fff;
+	transition: all 0.5s;
+	width: 80px;
+
+	&:disabled,
+	&[disabled] {
+		opacity: 0.4;
+	}
+
+	&.active {
+		opacity: 1;
+		background-color: rgba(20, 220, 23, 0.415);
+	}
+}
+
+
 .settings {
 	flex: 1 1 120px;
 
