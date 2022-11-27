@@ -139,7 +139,7 @@ function mainFunction() {
 				console.log(presentRound);
 			}
 		};
-	}, 100)
+	}, 1000)
 }
 
 // timer start
